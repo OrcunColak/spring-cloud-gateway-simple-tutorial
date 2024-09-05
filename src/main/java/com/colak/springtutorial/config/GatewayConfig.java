@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class GatewayConfig {
 
     // http://localhost:8080/get
+    // Forwards requests from /get to http://httpbin.org/get
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()

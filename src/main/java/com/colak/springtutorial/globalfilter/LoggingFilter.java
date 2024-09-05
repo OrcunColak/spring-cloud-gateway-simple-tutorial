@@ -13,6 +13,7 @@ import reactor.core.publisher.Mono;
 public class LoggingFilter implements GlobalFilter, Ordered {
 
 
+    // Filter logs the path of all incoming requests
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         log.info("Path of the request received -> {}", exchange.getRequest().getPath());
